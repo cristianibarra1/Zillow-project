@@ -9,7 +9,6 @@ import env
 import acquire
 import prepare
 
-####
 #creating a connect function to connected to the code up servers
 def get_connection(db, user=env.user, host=env.host, password=env.password):
     '''initiates sql connection'''
