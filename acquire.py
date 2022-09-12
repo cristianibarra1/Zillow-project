@@ -9,12 +9,12 @@ import env
 import acquire
 import prepare
 
-
+#creating a connect function to connected to the code up servers
 def get_connection(db, user=env.user, host=env.host, password=env.password):
     '''initiates sql connection'''
     return f'mysql+pymysql://{user}:{password}@{host}/{db}'
     
-#csv clean 
+#csv clean a downloaded version of the zillow data
 def clean_zillow():
     '''Read zillow csv file into a pandas DataFrame,
     renamed all of the columuns, replace NaN values with 0 ,
@@ -25,7 +25,7 @@ def clean_zillow():
                        "taxvaluedollarcnt":'TaxesTotal','yearbuilt':'Year','taxamount':'Taxes','fips':'Fips'})
 
     return df
-
+#csv clean a downloaded version of the zillow data
 def clean_zillow2():
     '''Read zillow csv file into a pandas DataFrame,
     renamed all of the columuns, replace NaN values with 0 ,
@@ -48,7 +48,7 @@ def clean_zillow2():
     df=df.replace('','0')
     
     return df
-#sql clean   
+#pulling from the code up server the zillow data frame   
 def sqlclean_zillow():
     query = """
     SELECT bedroomcnt,bathroomcnt,calculatedfinishedsquarefeet,taxvaluedollarcnt,yearbuilt
