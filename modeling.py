@@ -58,7 +58,7 @@ def test1(train):
         print('''Fail to reject the Null Hypothesis.
     Findings suggest there is not an association between bedrooms and taxestotal.''')
         
-        
+####      
 ###bathroom test
 def test2(train):
     ''' 
