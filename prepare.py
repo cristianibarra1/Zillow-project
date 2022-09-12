@@ -13,6 +13,7 @@ from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import MinMaxScaler
 import os 
 
+##preparing data
 def prep_zillow(df):
     '''prep the zzillow dataset by renaming the columns and 
     creating two new columns name decade and totalrooms
